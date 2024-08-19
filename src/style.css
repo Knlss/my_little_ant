@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main img {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+}
+
+.closed_env{
+    display: flex;
+    margin: auto;
+}
+
+.opening_env{
+    display: none;
+    margin: auto;
+}
+
+.open_env{
+    display: none;
+    margin: auto;
+}
+
+.overlay_wax{
+    display: none;
+    margin: auto;
+}
+
+.overlay_env{
+    display: none;
+    margin: auto;
+}
+
+.open_let{
+    display: none;
+    margin: auto;
+}
