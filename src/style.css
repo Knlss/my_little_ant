@@ -8,12 +8,8 @@
     height: 500px;
 }
 
-.hidden{
+.hidden_img{
     display: none;
-}
-
-.hidden_startButton{
-    pointer-events: none;
 }
 
 .start_button_click_area{
@@ -21,7 +17,7 @@
     height: 80px;
     width: 80px;
     position: absolute;
-    top: 56%;
+    top: 71%;
     left: 49.85%;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -29,9 +25,21 @@
     cursor: pointer;
 }
 
+.letter_click_area{
+    background-color: rgba(255, 0, 0, 0);
+    height: 40px;
+    width: 138px;
+    position: absolute;
+    top: 60%;
+    left: 49.85%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    cursor: pointer;
+}
+
 .show_img{
     position: absolute;
-    top: 55%;
+    top: 70%;
     left: 50%;
     object-fit: cover;
     transform: translate(-50%, -50%);
@@ -48,4 +56,42 @@
 }
 .open_let_click{
     z-index: 7;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translate(-50%, 0); /* Posição inicial relativa */
+    }
+    100% {
+        transform: translate(-50%, -30%); /* Ajusta a posição final */
+    }
+}
+
+/* Animação para descer e aumentar o tamanho */
+@keyframes moveDownAndGrow {
+    0% {
+        transform: translate(-50%, -30%); /* A partir de onde moveUp terminou */
+    }
+    100% {
+        transform: translate(-50%, -28%); /* Move o elemento para baixo */
+        width: 1000px; /* Aumenta o tamanho */
+        height: 1000px;
+    }
+}
+
+/* Aplica a animação de subida */
+.letter_click_up {
+    animation: moveUp 2s forwards;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* Aplica a animação de descer e aumentar o tamanho */
+.letter_click_down {
+    animation: moveDownAndGrow 2s forwards;
+    animation-delay: 2s; /* Ajuste o delay para sincronizar com a animação de subida */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -20%); /* Ajusta a posição inicial */
 }
