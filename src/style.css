@@ -1,6 +1,9 @@
+body{
+    overflow: hidden;
+}
+
 .main {
     display: relative;
-
 }
 
 .main img{
@@ -60,7 +63,7 @@
 
 @keyframes moveUp {
     0% {
-        transform: translate(-50%, 0); /* Posição inicial relativa */
+        transform: translate(-50%, 33%); /* Posição inicial relativa */
     }
     100% {
         transform: translate(-50%, -30%); /* Ajusta a posição final */
@@ -73,7 +76,7 @@
         transform: translate(-50%, -30%); /* A partir de onde moveUp terminou */
     }
     100% {
-        transform: translate(-50%, -28%); /* Move o elemento para baixo */
+        transform: translate(-50%, -20%); /* Move o elemento para baixo */
         width: 1000px; /* Aumenta o tamanho */
         height: 1000px;
     }
@@ -93,5 +96,5 @@
     animation-delay: 2s; /* Ajuste o delay para sincronizar com a animação de subida */
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -20%); /* Ajusta a posição inicial */
+    transform: translate(-50%, -30%); /* Ajusta a posição inicial */
 }
