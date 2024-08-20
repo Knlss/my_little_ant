@@ -48,17 +48,14 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.envelope{
-    z-index: 1;
+.empty_env{
+    z-index: 4;
 }
 .overlay_env{
-    z-index: 6;
+    z-index: 80 !important;
 }
-.open_let_noclick{
-    z-index: 5;
-}
-.open_let_click{
-    z-index: 7;
+.open_let{
+    z-index: 5 !important;
 }
 
 @keyframes moveUp {
@@ -84,7 +81,7 @@ body{
 
 /* Aplica a animação de subida */
 .letter_click_up {
-    animation: moveUp 2s forwards;
+    animation: moveUp 1.4s forwards;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
@@ -92,8 +89,7 @@ body{
 
 /* Aplica a animação de descer e aumentar o tamanho */
 .letter_click_down {
-    animation: moveDownAndGrow 2s forwards;
-    animation-delay: 2s; /* Ajuste o delay para sincronizar com a animação de subida */
+    animation: moveDownAndGrow 1s forwards;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -30%); /* Ajusta a posição inicial */
